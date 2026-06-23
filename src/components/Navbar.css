@@ -1,0 +1,85 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 24px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 16px 0;
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid var(--glass-gold-border) !important;
+  background: rgba(5, 8, 20, 0.7) !important;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-white);
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, var(--text-white), var(--secondary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-silver);
+  text-decoration: none;
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-gold);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.contact-btn {
+  padding: 8px 24px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 20px;
+  color: var(--primary-gold);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: rgba(212, 175, 55, 0.1);
+  box-shadow: var(--neon-glow);
+  color: var(--secondary-gold);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

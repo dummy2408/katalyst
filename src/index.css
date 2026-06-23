@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap');
+
+:root {
+  /* Brand Colors Extracted from KATALYST */
+  --bg-dark: #050814;
+  --bg-darker: #02040a;
+  --bg-panel: rgba(10, 14, 23, 0.6);
+  --primary-gold: #D4AF37;
+  --secondary-gold: #F4D03F;
+  --text-white: #FFFFFF;
+  --text-silver: #B0B0B0;
+
+  /* Fonts */
+  --font-heading: 'Orbitron', sans-serif;
+  --font-accent: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Glassmorphism & Neon */
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-gold-border: rgba(212, 175, 55, 0.3);
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --neon-glow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-dark);
+  color: var(--text-silver);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-white);
+  letter-spacing: 1px;
+}
+
+/* Base Glassmorphism utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--secondary-gold), var(--primary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-gold);
+  border-radius: 4px;
+}
+
+/* App layout wrapper to handle the 3D background behind everything */
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+}
