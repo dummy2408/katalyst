@@ -35,7 +35,9 @@ const About = () => {
              <p className="feature-desc">Empower organizations with reliable, innovative, and result-driven consulting services that drive sustainable growth, market expansion, and long-term success.</p>
           </motion.div>
           <motion.div className="feature-card glass-panel" initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}>
-             <div className="feature-icon-wrapper"><UserCheck size={32} color="var(--primary-gold)" /></div>
+             <div className="feature-icon-wrapper" style={{ padding: 0, overflow: 'hidden', borderRadius: '50%', width: '80px', height: '80px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <img src="/ceo.jpeg" alt="Aasim Shah Kakaa’Khel" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+             </div>
              <h3 className="feature-title">Leadership</h3>
              <p className="feature-desc">Led by <strong>Aasim Shah Kakaa’Khel</strong>, Founder & CEO, guiding our strategic intelligence.</p>
           </motion.div>
