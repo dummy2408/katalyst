@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
-import Background3D from './components/Background3D';
 import Hero from './components/Hero';
 import About from './components/About';
 import Features from './components/Features';
@@ -26,9 +25,7 @@ function App() {
 
   return (
     <>
-      <Background3D />
-      
-      {/* Custom Glowing Cursor */}
+      {/* Subtle Ambient Cursor */}
       <motion.div 
         className="custom-cursor"
         animate={{

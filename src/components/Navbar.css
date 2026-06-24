@@ -4,15 +4,19 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  padding: 24px 0;
+  padding: 20px 0;
   transition: all 0.3s ease;
+  background: transparent;
 }
 
 .navbar.scrolled {
-  padding: 16px 0;
+  padding: 12px 0;
   border-radius: 0 !important;
   border: none !important;
-  background: rgba(5, 8, 20, 0.7) !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
 .navbar-container {
@@ -33,13 +37,10 @@
 
 .logo-text {
   font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 800;
+  font-size: 1.4rem;
   color: var(--text-white);
-  letter-spacing: 2px;
-  background: linear-gradient(135deg, var(--text-white), var(--secondary-gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.05em;
 }
 
 .nav-links {
@@ -51,30 +52,49 @@
 .nav-link {
   color: var(--text-silver);
   text-decoration: none;
-  font-family: var(--font-accent);
-  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-gold);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
   color: var(--primary-gold);
-  text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 
 .contact-btn {
   padding: 8px 24px;
-  border: 1px solid var(--primary-gold);
-  border-radius: 20px;
+  border: 1.5px solid var(--primary-gold);
+  border-radius: 8px;
   color: var(--primary-gold);
   background: transparent;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
+.contact-btn::after {
+  display: none;
+}
+
 .contact-btn:hover {
-  background: rgba(212, 175, 55, 0.1);
-  box-shadow: var(--neon-glow);
-  color: var(--secondary-gold);
+  background: var(--primary-gold);
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) {

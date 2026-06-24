@@ -1,25 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Orbitron:wght@400;500;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Brand Colors Extracted from KATALYST */
-  --bg-dark: #050814;
-  --bg-darker: #02040a;
-  --bg-panel: rgba(10, 14, 23, 0.6);
-  --primary-gold: #D4AF37;
-  --secondary-gold: #F4D03F;
-  --text-white: #FFFFFF;
-  --text-silver: #B0B0B0;
+  /* Light Theme Colors */
+  --bg-dark: #FFFFFF;
+  --bg-darker: #F5F6FA;
+  --bg-panel: rgba(255, 255, 255, 0.9);
+  --primary-gold: #B8860B;
+  --secondary-gold: #D4A017;
+  --text-white: #1A1D2E;
+  --text-silver: #5A6178;
 
   /* Fonts */
-  --font-heading: 'Orbitron', sans-serif;
-  --font-accent: 'Space Grotesk', sans-serif;
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-accent: 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Glassmorphism & Neon */
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-gold-border: rgba(212, 175, 55, 0.3);
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --neon-glow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+  /* Card & Surface */
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-gold-border: rgba(184, 134, 11, 0.2);
+  --glass-bg: #FFFFFF;
+  --neon-glow: 0 4px 20px rgba(184, 134, 11, 0.15);
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.06);
+  --card-hover-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
 }
 
 * {
@@ -44,20 +46,20 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   color: var(--text-white);
-  letter-spacing: 1px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
-/* Base Glassmorphism utilities */
+/* Card surface */
 .glass-panel {
   background: var(--glass-bg);
-  -webkit-backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
+  box-shadow: var(--card-shadow);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, var(--secondary-gold), var(--primary-gold));
+  background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -65,22 +67,23 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
   background: var(--bg-darker);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary-gold);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
-/* App layout wrapper to handle the 3D background behind everything */
+/* App layout */
 #root {
   position: relative;
   min-height: 100vh;
 }
 
+/* Subtle ambient cursor */
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -88,8 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(184, 134, 11, 0.05) 0%, rgba(0,0,0,0) 70%);
   pointer-events: none;
   z-index: 9999;
-  mix-blend-mode: screen;
 }

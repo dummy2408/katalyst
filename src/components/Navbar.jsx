@@ -22,7 +22,7 @@ const Navbar = () => {
     >
       <div className="navbar-container">
         <div className="logo-container">
-          <img src="/logo.jpeg" alt="KATALYST Logo" style={{ width: '40px', height: '40px', borderRadius: '50%', objectFit: 'cover', border: '1px solid var(--primary-gold)' }} />
+          <img src="/logo.jpeg" alt="KATALYST Logo" style={{ width: '40px', height: '40px', borderRadius: '8px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.08)' }} />
           <span className="logo-text">KATALYST</span>
         </div>
         <div className="nav-links">

@@ -22,10 +22,10 @@ const Hero = () => {
             Professional business consultancy delivering integrated strategic solutions in Pakistan and across international markets.
           </p>
           <div className="hero-cta">
-            <button className="primary-btn glass-panel neon-hover" onClick={() => document.getElementById('services').scrollIntoView()}>
+            <button className="primary-btn neon-hover" onClick={() => document.getElementById('services').scrollIntoView({ behavior: 'smooth' })}>
               Our Services
             </button>
-            <button className="secondary-btn" onClick={() => document.getElementById('why-katalyst').scrollIntoView()}>
+            <button className="secondary-btn" onClick={() => document.getElementById('why-katalyst').scrollIntoView({ behavior: 'smooth' })}>
               Why KATALYST?
             </button>
           </div>
@@ -38,7 +38,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          {/* Removed LevitatingSphere as requested */}
+          {/* Visual placeholder area */}
         </motion.div>
       </div>
     </section>

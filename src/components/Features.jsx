@@ -32,15 +32,12 @@ const FeatureCard = ({ feature, index }) => {
       className="feature-card glass-panel"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
       viewport={{ once: true, margin: "-100px" }}
       whileHover={{ 
-        scale: 1.05, 
-        rotateX: 10, 
-        rotateY: -10,
-        boxShadow: "0 20px 40px rgba(0,0,0,0.4), var(--neon-glow)"
+        y: -8,
+        boxShadow: "0 12px 32px rgba(0, 0, 0, 0.12)"
       }}
-      style={{ transformPerspective: 1000 }}
     >
       <div className="feature-icon-wrapper">
         {feature.icon}

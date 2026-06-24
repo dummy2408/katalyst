@@ -12,7 +12,7 @@ const clients = [
 
 const Clients = () => {
   return (
-    <section id="clients" className="snap-section" style={{ padding: '100px 0', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+    <section id="clients" className="snap-section" style={{ padding: '100px 0', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', background: '#FFFFFF' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', padding: '0 24px', textAlign: 'center' }}>
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
@@ -21,30 +21,34 @@ const Clients = () => {
           viewport={{ once: true }}
           style={{ marginBottom: '64px' }}
         >
-          <h2 style={{ fontSize: '3rem', marginBottom: '16px' }}>Satisfied <span className="gold-gradient-text">Clients</span></h2>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-silver)' }}>Trusted by leading organizations globally.</p>
+          <h2 style={{ fontSize: '2.75rem', marginBottom: '16px', fontWeight: 800, letterSpacing: '-0.02em' }}>Satisfied <span className="gold-gradient-text">Clients</span></h2>
+          <p style={{ fontSize: '1.1rem', color: 'var(--text-silver)' }}>Trusted by leading organizations globally.</p>
         </motion.div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
           {clients.map((client, index) => (
             <motion.div
               key={index}
-              className="glass-panel"
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: (index % 10) * 0.1 }}
+              transition={{ duration: 0.4, delay: (index % 10) * 0.05 }}
               viewport={{ once: true }}
               style={{
-                padding: '12px 24px',
-                fontSize: '1rem',
+                padding: '10px 22px',
+                fontSize: '0.95rem',
                 fontWeight: '500',
                 color: 'var(--text-white)',
                 cursor: 'default',
+                background: 'var(--bg-darker)',
+                borderRadius: '10px',
+                border: '1px solid rgba(0, 0, 0, 0.05)',
+                transition: 'all 0.3s ease',
               }}
               whileHover={{ 
                 scale: 1.05, 
-                backgroundColor: 'rgba(212, 175, 55, 0.2)',
-                boxShadow: 'var(--neon-glow)'
+                backgroundColor: 'rgba(184, 134, 11, 0.08)',
+                borderColor: 'rgba(184, 134, 11, 0.25)',
+                boxShadow: '0 4px 16px rgba(184, 134, 11, 0.12)'
               }}
             >
               {client}
