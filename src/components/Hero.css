@@ -5,6 +5,8 @@
   min-height: 100vh;
   padding-top: 80px;
   background: linear-gradient(180deg, #FFFFFF 0%, #F5F6FA 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-content {

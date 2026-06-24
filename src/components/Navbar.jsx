@@ -21,7 +21,7 @@ const Navbar = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div className="navbar-container">
-        <div className="logo-container">
+        <div className="logo-container" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img src="/logo.jpeg" alt="KATALYST Logo" style={{ width: '40px', height: '40px', borderRadius: '8px', objectFit: 'cover', border: '1px solid rgba(0,0,0,0.08)' }} />
           <span className="logo-text">KATALYST</span>
         </div>

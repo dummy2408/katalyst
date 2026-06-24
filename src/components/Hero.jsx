@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Background3D from './Background3D';
 import './Hero.css';
 
 const Hero = () => {
   return (
     <section id="home" className="hero-section snap-section">
+      <Background3D />
       <div className="hero-content">
         <motion.div
           className="hero-text"

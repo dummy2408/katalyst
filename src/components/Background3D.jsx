@@ -53,11 +53,10 @@ const Particles = ({ count }) => {
 
 const Background3D = () => {
   return (
-    <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', zIndex: -1 }}>
+    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 0 }}>
       <Canvas camera={{ position: [0, 0, 15], fov: 75 }}>
-        <ambientLight intensity={0.2} />
-        <pointLight position={[10, 10, 10]} color="#D4AF37" intensity={1} />
-        <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade speed={1} />
+        <ambientLight intensity={0.5} />
+        <pointLight position={[10, 10, 10]} color="#B8860B" intensity={1.5} />
         <Particles count={isMobile() ? 100 : 300} />
       </Canvas>
     </div>
